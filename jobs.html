@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Job Portal - Jobs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AI Job Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="post-job.html">Post a Job</a></li>
+                <li><a href="main.html">profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Find Your Dream Job with AI Assistance</h2>
+        <p>Our AI-powered system helps you get matched with the best job opportunities.</p>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter">
+        <h3>Filter Jobs</h3>
+        <label for="category">Category:</label>
+        <select id="category">
+            <option value="All">All</option>
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="Data Scientist">Data Scientist</option>
+        </select>
+
+        <label for="location">Location:</label>
+        <select id="location">
+            <option value="All">All</option>
+            <option value="Remote">Remote</option>
+            <option value="San Francisco, CA">San Francisco, CA</option>
+        </select>
+    </section>
+
+    <!-- Dynamic Job Listings Section -->
+    <section class="job-listings" id="job-listings">
+        <h2>Latest Job Openings</h2>
+        <!-- Job listings will be injected here by JavaScript -->
+    </section>
+
+    <footer>
+        <p>&copy; 2025 AI Job Portal. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link your script here -->
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Main Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #3c487d;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    #profileIcon {
+      font-size: 30px;
+      color: #333;
+      cursor: pointer;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1001;
+    }
+
+    #profileIcon img {
+      width: 40px;
+      height: 40px;
+    }
+
+    #mainContent {
+      padding: 20px;
+      margin-left: 0;
+      transition: margin-left 0.3s ease;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #3c487d;
+      color: white;
+    }
+
+    /* Summary Bar */
+    .feature-summary {
+      display: flex;
+      justify-content: space-around;
+      background: #3c487d;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 20px 0;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+
+    .feature-summary div {
+      margin: 10px;
+      font-size: 16px;
+    }
+
+    /* AI Features Grid */
+    .ai-features {
+      padding: 20px;
+    }
+
+    .ai-features h2 {
+      color: #3c487d;
+      text-align: center;
+    }
+
+    .ai-features p {
+      color: #666;
+      text-align: center;
+    }
+
+    .ai-feature-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .ai-feature {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    .ai-feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .ai-feature h3 {
+      color: #3c487d;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ai-feature p,
+    .ai-feature ul {
+      color: #666;
+    }
+
+    .ai-feature ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .ai-feature a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3c487d;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .ai-feature a:hover {
+      background-color: #2e3963;
+      transform: scale(1.05);
+    }
+
+    .badge-new {
+      background-color: #ff4081;
+      color: white;
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 12px;
+      margin-left: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main content -->
+  <div id="mainContent">
+    <header>
+      <h1>Welcome to the AI Job Portal</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="post-job.html">Post a Job</a></li>
+          <li><a href="login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="main-content">
+      <h2><pre>     Welcome Back!</pre></h2>
+    </section>
+
+    <!-- AI Features Summary -->
+    <div class="feature-summary">
+      <div><i class="fas fa-brain"></i> 4 Smart Tools</div>
+      <div><i class="fas fa-bolt"></i> Instant Feedback</div>
+      <div><i class="fas fa-chart-line"></i> Career Insights</div>
+    </div>
+
+    <!-- AI Features Section -->
+    <section class="ai-features">
+      <h2>Explore Our AI Features</h2>
+      <p>Our AI-driven tools can help you build a better career. Learn more about how we can assist you with interview<br>
+        preparation, resume building, and more.</p>
+
+      <div class="ai-feature-list">
+        <!-- Feature 1 -->
+        <div class="ai-feature">
+          <h3><i class="fas fa-microphone-alt"></i> Interview Preparation</h3>
+          <p>Simulate real interviews with our AI mock system and receive real-time feedback.</p>
+          <ul>
+            <li>AI-powered mock interviews</li>
+            <li>Real-time feedback on answers</li>
+            <li>Customizable scenarios by job role</li>
+          </ul>
+          <a href="interview-preparation.html">Start Your Mock Interview</a>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="ai-feature">
+          <h3><i class="fas fa-file-alt"></i> Resume Builder <span class="badge-new">NEW</span></h3>
+          <p>Create professional resumes with AI suggestions tailored to your career goals.</p>
+          <ul>
+            <li>Drag-and-drop builder</li>
+            <li>AI-based improvement tips</li>
+            <li>Templates for various roles</li>
+          </ul>
+          <a href="resume-builder.html">Build Your Resume</a>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="ai-feature">
+          <h3><i class="fas fa-user-check"></i> Job Recommendations</h3>
+          <p>AI analyzes your profile and shows job listings that match your skills and interests.</p>
+          <ul>
+            <li>Custom job matches</li>
+            <li>Email alerts</li>
+            <li>Trends and updates</li>
+          </ul>
+          <a href="jobs.html">Explore Job Listings</a>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="ai-feature">
+          <h3><i class="fas fa-tasks"></i> Skill Assessment</h3>
+          <p>Evaluate your skills and receive learning paths with our AI-powered assessments.</p>
+          <ul>
+            <li>Interactive skill tests</li>
+            <li>Feedback on strengths</li>
+            <li>Learning suggestions</li>
+          </ul>
+          <a href="skill-assessment.html">Start Skill Assessment</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 AI Job Portal. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Profile Icon -->
+  <span id="profileIcon">
+    <img src="profile-icon.png" alt="Profile Icon" />
+  </span>
+
+  <script>
+    document.getElementById('profileIcon').addEventListener('click', function () {
+      let sidebar = document.getElementById('sidebar');
+      let mainContent = document.getElementById('mainContent');
+
+      if (sidebar && sidebar.classList.contains('open')) {
+        sidebar.classList.remove('open');
+        mainContent.classList.remove('sidebar-open');
+      } else if (sidebar) {
+        sidebar.classList.add('open');
+        mainContent.classList.add('sidebar-open');
+      }
+    });
+
+    if (!localStorage.getItem('isLoggedIn')) {
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        /* General Body Style */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+            background-image: url('back.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        /* Container Style */
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        /* Heading Style */
+        h2 {
+            color: #3c487d;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        /* Form Layout */
+        form {
+            display: grid;
+            gap: 15px;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            color: #3c487d;
+        }
+
+        input[type="text"], input[type="number"], input[type="password"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="tel"]:focus, select:focus, textarea:focus {
+            border-color: #3c487d;
+            box-shadow: 0 0 5px rgba(60, 72, 125, 0.5);
+        }
+
+        /* Submit Button Style */
+        input[type="submit"] {
+            background-color: #3c487d;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2b3e8d;
+            transform: scale(1.05);
+        }
+
+        /* Thank You Message */
+        .thank-you {
+            display: none;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.5em;
+            color: #3c487d;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <!-- Full Name -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Age -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" required>
+
+            <!-- Mobile Number -->
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="1234567890" required>
+
+            <!-- Password -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <!-- Qualification Details -->
+            <label for="qualification">Highest Qualification:</label>
+            <select id="qualification" name="qualification" required>
+                <option value="highschool">High School</option>
+                <option value="bachelor">Bachelor's Degree</option>
+                <option value="master">Master's Degree</option>
+                <option value="phd">PhD</option>
+            </select>
+
+            <!-- Job Requirements -->
+            <label for="job_requirements">Preferred Job Role:</label>
+            <select id="job_requirements" name="job_requirements" required>
+                <option value="software_developer">Software Developer</option>
+                <option value="data_scientist">Data Scientist</option>
+                <option value="system_admin">System Administrator</option>
+                <option value="web_developer">Web Developer</option>
+            </select>
+
+            <!-- Location Preferences -->
+            <label for="location">Preferred Location:</label>
+            <select id="location" name="location" required>
+                <option value="remote">Remote</option>
+                <option value="onsite">Onsite</option>
+            </select>
+
+            <!-- Experience -->
+            <label for="experience">Years of Experience:</label>
+            <input type="number" id="experience" name="experience" min="0" max="30" required>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Register">
+        </form>
+
+        <!-- Thank You Message -->
+        <div class="thank-you" id="thankYouMessage">
+            <h2>Thank You for Registering!</h2>
+            <p>Your registration was successful. We will get in touch with you soon.</p>
+        </div>
+        
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event){
+            event.preventDefault(); // Prevent form from submitting to the server
+
+            // Show the thank you message
+            document.getElementById("thankYouMessage").style.display = "block";
+
+            // Redirect to the login page after 2 seconds
+            setTimeout(function() {
+                window.location.href = "login.html";
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+    </script>
+</body>
+</html>

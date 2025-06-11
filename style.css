@@ -1,0 +1,496 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color:#3c487d;
+    
+    color: rgb(249, 244, 244);
+    padding: 15px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(246, 242, 242);
+    text-decoration: none;
+}
+
+
+
+/* Job Listings */
+.job-listings {
+    margin: 20px;
+}
+
+.job {
+    background: #f7f5f0;
+    padding: 15px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.662);
+}
+
+.job button {
+    background-color:#3c487d;
+    color: #f9f8f5;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* New Post Job Page */
+.post-job {
+    margin: 20px;
+}
+
+.post-job form {
+    background: #f7f5f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.662);
+}
+
+.post-job input, .post-job textarea {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Login Page */
+.login {
+    margin: 20px;
+}
+
+.login form {
+    background: #f7f5f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.662);
+}
+
+.login input {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Footer */
+footer {
+    background-color:#3c487d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Chatbot Section */
+.chat-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.chat-box {
+    background-color: #d3ddf6;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-messages {
+    height: 150px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.chat-input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.send-button {
+    padding: 10px 20px;
+    background-color: #3c487d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color:#3c487d;
+}
+
+/* Hiring Companies Section */
+/* General Styles for Hiring Companies Section */
+.hiring-companies {
+    background-image: url('back.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    opacity: 0.85; /* Optional: makes the background less distracting */
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Container for Company Boxes */
+.company-boxes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Individual Company Box */
+.company-box {
+    background-color: #efefeb;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px; /* Reduced padding to make the box smaller */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Adjust to make boxes flexible */
+    max-width: 220px; /* Set a max width so boxes don't grow too large */
+    box-sizing: border-box; /* Ensures padding does not add to width */
+    height: 250px; /* Fixed height for the box */
+}
+
+.company-box img {
+    width: 100%;
+    height: 120px; /* Reduced height of the image to make the box shorter */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px;
+}
+
+.company-box h3 {
+    margin-top: 10px;
+    color: #010b16; /* Theme color for heading */
+    font-size: 16px; /* Reduced font size to fit the smaller box */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Hover Effect */
+.company-box:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 4px 10px rgba(2, 45, 91, 0.2); /* Soft shadow effect */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .company-boxes {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium-sized screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .company-boxes {
+        grid-template-columns: 1fr; /* 1 column on smaller screens */
+    }
+}
+
+/* AI Features Page */
+.ai-features-overview {
+    text-align: center;
+    padding: 50px;
+    background-color: #f7f5f0;
+}
+
+.ai-features-overview h2 {
+    font-size: 28px;
+    color:#3c487d;
+}
+
+.ai-features-overview p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.ai-feature {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ai-feature h3 {
+    font-size: 24px;
+    color: #3c487d;
+}
+
+.ai-feature p {
+    font-size: 16px;
+    color: #333;
+}
+
+.ai-feature ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ai-feature ul li {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.feature-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#3c487d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.feature-link:hover {
+    background-color: #3c487d;
+}
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    left: -250px; /* Initially hidden */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fcf8f8; /* Light background */
+    padding-top: 60px;
+    color: rgba(15, 1, 1, 0.378);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(12, 0, 0, 0.8);
+    transition: left 0.3s ease-in-out;
+}
+
+/* Sidebar Open Class */
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #010b0d;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    width: 100%;
+}
+
+.sidebar ul li a {
+    display: block;
+    text-decoration: none;
+    color: #000c0f;
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #0b0001;
+    color: white;
+}
+
+/* Profile Icon Styling */
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-right: 20px;
+    float: right;
+}
+
+/* Main Content Adjustments */
+.main-content {
+    margin-left: 20px; /* Default margin */
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Shift content when sidebar is open */
+.main-content.sidebar-open {
+    margin-left: 270px;
+}
+/* Profile Icon (Top Left) */
+.profile-icon {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+    z-index: 1000; /* Always on top */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    left: -250px; /* Initially hidden */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fcf8f8;
+    padding-top: 60px;
+    color: rgba(15, 1, 1, 0.378);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(12, 0, 0, 0.8);
+    transition: left 0.3s ease-in-out;
+    z-index: 999; /* Below profile icon */
+}
+
+/* Sidebar Open State */
+.sidebar.open {
+    left: 0;
+}
+
+/* Sidebar Links */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    width: 100%;
+}
+
+.sidebar ul li a {
+    display: block;
+    text-decoration: none;
+    color: #000c0f;
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #0b0001;
+    color: white;
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 0; /* Default (sidebar closed) */
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* When Sidebar is Open */
+.main-content.sidebar-open {
+    margin-left: 250px;
+}
+.testimonials {
+    padding: 50px 20px;
+    background-color: #d3ddf6;
+    text-align: center;
+}
+
+.testimonial-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-item {
+    background-color: rgb(235, 235, 239);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.job-search {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+
+
+.suggestions {
+    margin-top: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #eeecd6;
+    border-radius: 5px;
+    background-color: rgb(92, 101, 130);
+    display: none;
+}
+
+.suggestions p {
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.suggestions p:hover {
+    background-color: #92a2c1;
+}
